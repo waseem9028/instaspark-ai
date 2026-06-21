@@ -43,7 +43,38 @@
                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
             </div>
-            <p class="settings-desc">To generate content, you need a Google Gemini API Key. Your key is stored locally in your browser and is never sent elsewhere.</p>
+            <p class="settings-desc">Your key is stored only in your browser and is never sent to any server.</p>
+
+            <!-- Step-by-step guide to get a key -->
+            <div class="api-steps-guide">
+                <button class="steps-toggle" id="steps-toggle" aria-expanded="false">
+                    <span>📋 How to get a free Gemini API Key</span>
+                    <svg id="steps-chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <ol id="steps-list" class="steps-list hidden">
+                    <li>
+                        <span class="step-num">1</span>
+                        <span>Go to <a href="https://aistudio.google.com/" target="_blank" rel="noopener" class="step-link">aistudio.google.com <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a> and sign in with your Google account.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <span>Click <strong>"Get API Key"</strong> in the left sidebar menu.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <span>Click the blue <strong>"Create API Key"</strong> button.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">4</span>
+                        <span>Select an existing Google Cloud project or click <strong>"Create API key in new project"</strong>.</span>
+                    </li>
+                    <li>
+                        <span class="step-num">5</span>
+                        <span>Your key (starts with <code>AIzaSy...</code>) will appear. Click <strong>Copy</strong> and paste it below.</span>
+                    </li>
+                </ol>
+            </div>
+
             <div class="input-group">
                 <label for="gemini-key">Gemini API Key</label>
                 <div class="input-wrapper">
@@ -65,11 +96,7 @@
                 </div>
             </div>
             <div class="settings-actions">
-                <a href="https://aistudio.google.com/" target="_blank" rel="noopener" class="link-btn text-sm">
-                    Get Key from Google AI Studio
-                    <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
-                <button id="save-key-btn" class="btn btn-primary btn-sm">Save Key</button>
+                <button id="save-key-btn" class="btn btn-primary btn-sm">Save Settings</button>
             </div>
         </section>
 

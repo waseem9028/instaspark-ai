@@ -78,6 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
         settingsCard.classList.add('hidden');
     });
 
+    // Toggle API Key Steps Guide accordion
+    const stepsToggle = document.getElementById('steps-toggle');
+    const stepsList = document.getElementById('steps-list');
+    stepsToggle.addEventListener('click', () => {
+        const isExpanded = stepsToggle.getAttribute('aria-expanded') === 'true';
+        stepsToggle.setAttribute('aria-expanded', !isExpanded);
+        stepsList.classList.toggle('hidden', isExpanded);
+    });
+
     // Toggle Password Masking
     keyVisibilityBtn.addEventListener('click', () => {
         if (geminiKeyInput.type === 'password') {

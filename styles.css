@@ -459,6 +459,116 @@ h1, h2, h3, h4 {
     100% { transform: scale(1); opacity: 1; }
 }
 
+/* API Key Steps Guide */
+.api-steps-guide {
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.steps-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all var(--transition-fast);
+}
+
+.steps-toggle:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.steps-toggle[aria-expanded="true"] {
+    color: white;
+    border-bottom: 1px solid var(--card-border);
+}
+
+#steps-chevron {
+    transition: transform var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.steps-toggle[aria-expanded="true"] #steps-chevron {
+    transform: rotate(180deg);
+}
+
+.steps-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.steps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.55rem 0;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    line-height: 1.5;
+}
+
+.steps-list li:last-child {
+    border-bottom: none;
+}
+
+.step-num {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--instagram-gradient);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.step-link {
+    color: var(--accent-pink);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    transition: color var(--transition-fast);
+}
+
+.step-link:hover {
+    color: white;
+}
+
+.steps-list strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.steps-list code {
+    background: rgba(150, 47, 191, 0.15);
+    border: 1px solid rgba(150, 47, 191, 0.25);
+    color: #c984f1;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-family: monospace;
+}
+
 /* API Warning Banner */
 .api-warning-banner {
     display: flex;
